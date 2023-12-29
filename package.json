@@ -1,0 +1,52 @@
+{
+    "name": "capsule-ui",
+    "version": "0.0.1",
+    "description": "CSS framework build for Capsule",
+    "main": "capsule-ui.sass",
+    "unpkg": "css/capsule-ui.css",
+    "style": "css/capsule-ui.min.css",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/brikkr/capsuleUI.git"
+    },
+    "license": "MIT",
+    "keywords": [
+      "css",
+      "sass",
+      "grid",
+      "responsive",
+      "framework",
+      "capsule",
+      "solid"
+    ],
+    "bugs": {
+      "url": "https://github.com/brikkr/capsuleUI/issues"
+    },
+    "devDependencies": {
+      "autoprefixer": "^10.4.16",
+      "clean-css-cli": "^5.6.2",
+      "node-sass": "^9.0.0",
+      "postcss-cli": "^10.1.0",
+      "rimraf": "^5.0.5"
+    },
+    "scripts": {
+      "build": "npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+      "build-autoprefix": "postcss --use autoprefixer --map false --output css/capsule-ui.css css/capsule-ui.css",
+      "build-cleancss": "cleancss -o css/capsule-ui.min.css css/capsule-ui.css",
+      "build-sass": "node-sass --output-style expanded --source-map true capsule-ui.sass css/capsule-ui.css",
+      "clean": "rimraf css",
+      "rtl": "npm run rtl-sass && npm run rtl-autoprefix && npm run rtl-cleancss",
+      "rtl-sass": "node-sass --output-style expanded --source-map true capsule-ui-rtl.sass css/capsule-ui-rtl.css",
+      "rtl-autoprefix": "postcss --use autoprefixer --map false --output css/capsule-ui-rtl.css css/capsule-ui-rtl.css",
+      "rtl-cleancss": "cleancss -o css/capsule-ui-rtl.min.css css/capsule-ui-rtl.css",
+      "deploy": "npm run clean && npm run build && npm run rtl",
+      "start": "npm run build-sass -- --watch"
+    },
+    "files": [
+      "css",
+      "sass",
+      "capsule-ui.sass",
+      "LICENSE",
+      "README.md"
+    ]
+  }

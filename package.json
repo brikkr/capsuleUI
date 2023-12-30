@@ -40,7 +40,7 @@
       "rtl-autoprefix": "postcss --use autoprefixer --map false --output css/capsule-ui-rtl.css css/capsule-ui-rtl.css",
       "rtl-cleancss": "cleancss -o css/capsule-ui-rtl.min.css css/capsule-ui-rtl.css",
       "deploy": "npm run clean && npm run build && npm run rtl",
-      "start": "npm run build-sass -- --watch"
+      "start": "npm run build-sass"
     },
     "files": [
       "css",

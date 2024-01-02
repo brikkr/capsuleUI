@@ -1,0 +1,46 @@
+.grid-layout
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+
+  .grid-item
+    flex: 1 0 auto
+    border-radius: 1rem
+    background-color: grey
+    aspect-ratio : 1 / 1
+
+  .ws
+    flex: 0 0 calc(25%)
+    background-color: pink
+
+  .wm
+    flex: 0 0 50%
+    background-color: purple
+  
+  .wl
+    flex: 0 0 100%
+
+  .r2-1
+    aspect-ratio : 2 / 1
+
+  .r4-1
+    aspect-ratio : 4 / 1
+  
+  .r8-1
+    aspect-ratio : 8 / 1
+
+  .r1-2
+    aspect-ratio : 1 / 2
+
+  .r1-4
+    aspect-ratio : 1 / 4
+
+
+
+@media (max-width: 800px)
+  .grid-layout
+    flex-direction: column
+
+  .grid-item
+    flex: 100%
+

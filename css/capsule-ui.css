@@ -1,5 +1,6 @@
 /*! v0.0.1 | MIT License | https://github.com/brikkr/capsuleUI */
 /* CapsuleUI Base */
+@import url(https://fonts.googleapis.com/css?family=Rubik);
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0px;
@@ -51,6 +52,7 @@ input {
 
 body {
   background-color: #E5E5E5;
+  font-family: "Rubik";
 }
 
 section {
@@ -119,6 +121,15 @@ section {
 
 .about .solid-issuer .title {
   font-size: 1.5em;
+}
+
+.navigation {
+  background-color: #44F8B0 !important;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=capsule-ui.css.map */

@@ -1,0 +1,81 @@
+.wrapper
+    display: flex
+    width: 100%
+
+    .content
+        width: 100%
+        min-height: 100vh
+        &:has(.sidebar .visible)
+             width: 50%
+    .sidebar
+        position: absolute
+        top: 0
+        right: 0
+        width: 0
+        background-color: $logo-bg-color            
+        padding: 1rem
+        min-height: 100vh
+        color: #FFFFFF
+        transition: left 0.5s
+        transition: right 0.5s
+        &.qrtr
+            width: 25%
+            &.left
+                left: -25%
+            &.right
+                right: -25%
+        &.half
+            &.left
+                left: -50%
+            &.right
+                right: -50%
+        &.full
+            &.left
+                left: -100%
+            &.right
+                right: -100%
+        &.visible
+            &.qrtr
+                width: 25%
+            &.half
+                width: 50%
+            &.full
+                width: 100%
+            &.left
+                left: 0
+            &.right
+                right: 0
+
+
+    @media (max-width: 80em)
+        .sidebar
+            &.qrtr
+                width: 100%
+                &.left
+                    left: -100%
+                &.right
+                    right: -100%
+            &.half
+                &.left
+                    left: -100%
+                &.right
+                    right: -100%
+            &.full
+                &.left
+                    left: -100%
+                &.right
+                    right: -100%
+            &.visible
+                &.qrtr
+                    width: 100%
+                &.half
+                    width: 100%
+                &.full
+                    width: 100%
+                &.left
+                    left: 0
+                &.right
+                    right: 0
+
+            
+    

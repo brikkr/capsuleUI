@@ -2,14 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Capsule UI!</title>
     <link rel="stylesheet" href="./css/capsule-ui.css">
     
   <body>
     <div class="wrapper">
       <div class="sidebar right qrtr">
-        <button onclick="toggleSidebar()">
+        <button class="btn primary" onclick="toggleSidebar()">
           Close
         </button>
       </div>
@@ -17,25 +16,30 @@
         <section class="section">
           <div class="grid-layout">
             <a onclick="toggleSidebar()" href="javascript:void(0);"><div class="grid-item logo"><img src="./img/solid-emblem.svg" alt=""></div></a>
-            
             <div class="grid-item btn-group">
-              <button class="btn primary">button</button>
-              <button class="btn secondary">button</button>
-              <button class="btn" disabled>button</button>
+              <button class="btn primary sm">small</button>
+              <button class="btn secondary lg">big</button>
             </div>
-            <div class="grid-item col-md btn-group">
-              <button class="btn primary">button</button>
-              <button class="btn secondary">button</button>
-              
+            <div class="grid-item col-lg btn-group inline">
+              <button class="btn" disabled>disabled</button>
+              <button class="btn primary inversed">button</button>
+              <button class="btn secondary inversed">button</button>
+              <button class="btn primary full">button</button>
             </div>
-            <div class="grid-item col-xs">item 4</div>
-            <div class="grid-item col-xs row-md">item 5</div>
+            <div class="grid-item col-xs primary"></div>
+            <div class="grid-item col-xs row-md secondary"><button class="btn primary full lg">button</button></div>
             <div class="grid-item col-lg row-xs">item 6</div>
             <div class="grid-item grid-item-7">item 7</div>
             <div class="grid-item grid-item-8">item 8</div>
             <div class="grid-item grid-item-9">item 9</div>
             <div class="grid-item lg grid-item-10">item 10</div>
-            <div class="grid-item grid-item-11">item 11</div>
+            <div class="grid-item grid-item-11 row-lg col-lg">
+              <form class="form">
+                <input class="full" disabled type="text" placeholder="Enter text..."></input>
+                <input class="full" type="text" placeholder="Enter email..."></input>
+                <input type="submit" class="btn primary full"/>
+              </form>
+            </div>
             <div class="grid-item grid-item-12">item 12</div>
             <div class="grid-item span-2 grid-item-13">item 13</div>
             <div class="grid-item grid-item-14">item 14</div>

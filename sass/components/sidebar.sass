@@ -7,21 +7,24 @@
         min-height: 100vh
 
     .sidebar
-        position: absolute
+        position: fixed
         top: 0
         right: 0
-        width: 0
-        background-color: $logo-bg-color            
+        background-color: $primary           
         padding: 1rem
         min-height: 100vh
         color: #FFFFFF
         transition: left 0.5s
         transition: right 0.5s
+        &.secondary
+             background-color: $secondary  
+
         &.qrtr
+            width: 25%
             &.left
-                left: 0%
+                left: -25%
             &.right
-                right: 0%
+                right: -25%
         &.half
             &.left
                 left: -50%
@@ -48,7 +51,6 @@
     @media (max-width: 80em)
         .sidebar
             &.qrtr
-                width: 100%
                 &.left
                     left: -100%
                 &.right

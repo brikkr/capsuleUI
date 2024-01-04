@@ -1,0 +1,32 @@
+input
+    font-size: $font-size
+    border-radius: 0.5rem
+    line-height: 1.5
+    padding: 5px 10px
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in
+    border: 3px solid $light-gray
+    color: $black
+    background: $light-gray
+    display: block
+
+    &::placeholder
+        color: $gray
+    
+    &:hover 
+        border-color: $gray
+    
+    &:focus
+        border-color: $primary
+        background:  $white
+        &.primary
+            border-color: $primary
+        &.secondary
+            border-color: $secondary
+    &:disabled
+        border-color: $light-gray
+
+
+    &.full
+        width: 100%
+    
+                

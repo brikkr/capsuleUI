@@ -1,6 +1,6 @@
 /*! v0.0.1 | MIT License | https://github.com/brikkr/capsuleUI */
 /* CapsuleUI Base */
-@import url(https://fonts.googleapis.com/css?family=Rubik);
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0px;
@@ -50,9 +50,20 @@ input {
   border-radius: 0;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 body {
   background-color: #E7EBEE;
-  font-family: "Rubik";
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
 }
 
 section {
@@ -70,39 +81,53 @@ section {
 
 .grid-layout .grid-item {
   padding: 1rem;
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 1rem;
 }
 
-.grid-layout .col-sm {
+.grid-layout .grid-item.primary {
+  background-color: #1DE9B6;
+  color: #000021;
+}
+
+.grid-layout .grid-item.secondary {
+  background-color: #7C4DFF;
+  color: #FFFFFF;
+}
+
+.grid-layout .grid-item.full {
+  width: 100%;
+}
+
+.grid-layout .grid-item.col-sm {
   grid-column-end: span 1;
 }
 
-.grid-layout .col-md {
+.grid-layout .grid-item.col-md {
   grid-column-end: span 2;
 }
 
-.grid-layout .col-lg {
+.grid-layout .grid-item.col-lg {
   grid-column-end: span 3;
 }
 
-.grid-layout .col-xl {
+.grid-layout .grid-item.col-xl {
   grid-column-end: span 4;
 }
 
-.grid-layout .row-sm {
+.grid-layout .grid-item.row-sm {
   grid-row-end: span 1;
 }
 
-.grid-layout .row-md {
+.grid-layout .grid-item.row-md {
   grid-row-end: span 2;
 }
 
-.grid-layout .row-lg {
+.grid-layout .grid-item.row-lg {
   grid-row-end: span 3;
 }
 
-.grid-layout .row-xl {
+.grid-layout .grid-item.row-xl {
   grid-row-end: span 4;
 }
 
@@ -112,6 +137,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .logo img {
@@ -130,11 +156,10 @@ section {
 }
 
 .wrapper .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  width: 0;
-  background-color: #7C4DFF !important;
+  background-color: #1DE9B6;
   padding: 1rem;
   min-height: 100vh;
   color: #FFFFFF;
@@ -142,16 +167,20 @@ section {
   transition: right 0.5s;
 }
 
+.wrapper .sidebar.secondary {
+  background-color: #7C4DFF;
+}
+
 .wrapper .sidebar.qrtr {
   width: 25%;
 }
 
 .wrapper .sidebar.qrtr.left {
-  left: 0%;
+  left: -25%;
 }
 
 .wrapper .sidebar.qrtr.right {
-  right: 0%;
+  right: -25%;
 }
 
 .wrapper .sidebar.half.left {
@@ -191,9 +220,6 @@ section {
 }
 
 @media (max-width: 80em) {
-  .wrapper .sidebar.qrtr {
-    width: 100%;
-  }
   .wrapper .sidebar.qrtr.left {
     left: -100%;
   }
@@ -233,15 +259,13 @@ section {
   display: inline-block;
   outline: none;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 0.5rem;
   padding: 12px 24px;
   border: 0;
   color: #000021;
-  line-height: 1.15;
+  line-height: 1.25;
   font-size: 16px;
-  grid-column-end: span 1;
-  grid-row-end: span 1;
 }
 
 .btn:hover {
@@ -256,6 +280,15 @@ section {
   box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1DE9B6;
 }
 
+.btn.primary.inversed {
+  background: transparent;
+  color: #1DE9B6;
+}
+
+.btn.primary.inversed:hover {
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1DE9B6;
+}
+
 .btn.secondary {
   background: #7C4DFF;
   color: #FFFFFF;
@@ -265,16 +298,92 @@ section {
   box-shadow: 0 0 0 0 #fff, 0 0 0 3px #7C4DFF;
 }
 
+.btn.secondary.inversed {
+  background: transparent;
+  color: #7C4DFF;
+}
+
+.btn.secondary.inversed:hover {
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #7C4DFF;
+}
+
 .btn:disabled {
   background: #E7EBEE;
   color: #D3D3D3;
 }
 
+.btn.lg {
+  line-height: 1.75;
+}
+
+.btn.sm {
+  line-height: 0.75;
+}
+
+.btn.full {
+  width: 100%;
+}
+
 .btn-group {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-group.inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input {
+  font-size: 16px;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  padding: 5px 10px;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+  border: 3px solid #E7EBEE;
+  color: #000021;
+  background: #E7EBEE;
+  display: block;
+}
+
+input::placeholder {
+  color: #D3D3D3;
+}
+
+input:hover {
+  border-color: #D3D3D3;
+}
+
+input:focus {
+  border-color: #1DE9B6;
+  background: #FFFFFF;
+}
+
+input:focus.primary {
+  border-color: #1DE9B6;
+}
+
+input:focus.secondary {
+  border-color: #7C4DFF;
+}
+
+input:disabled {
+  border-color: #E7EBEE;
+}
+
+input.full {
+  width: 100%;
 }
 
 /*# sourceMappingURL=capsule-ui.css.map */

@@ -7,30 +7,40 @@
 
     .grid-item
         padding: 1rem
-        background-color: #fff
+        background-color: $white
         border-radius: 1rem
+        &.primary
+            background-color: $primary
+            color: $black
 
-    .col-sm
-        grid-column-end: span 1
+        &.secondary
+            background-color: $secondary
+            color: $white
+        
+        &.full
+            width: 100%
 
-    .col-md
-        grid-column-end: span 2
+        &.col-sm
+            grid-column-end: span 1
 
-    .col-lg
-        grid-column-end: span 3
+        &.col-md
+            grid-column-end: span 2
 
-    .col-xl
-        grid-column-end: span 4
+        &.col-lg
+            grid-column-end: span 3
+
+        &.col-xl
+            grid-column-end: span 4
+        
+        &.row-sm
+            grid-row-end: span 1
+
+        &.row-md
+            grid-row-end: span 2
+
+        &.row-lg
+            grid-row-end: span 3
+
+        &.row-xl
+            grid-row-end: span 4
     
-    
-    .row-sm
-        grid-row-end: span 1
-
-    .row-md
-        grid-row-end: span 2
-
-    .row-lg
-        grid-row-end: span 3
-
-    .row-xl
-        grid-row-end: span 4

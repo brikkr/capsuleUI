@@ -51,7 +51,7 @@ input {
 }
 
 body {
-  background-color: #E5E5E5;
+  background-color: #E7EBEE;
   font-family: "Rubik";
 }
 
@@ -119,10 +119,6 @@ section {
   padding: auto;
 }
 
-.about .solid-issuer .title {
-  font-size: 1.5em;
-}
-
 .wrapper {
   display: flex;
   width: 100%;
@@ -131,10 +127,6 @@ section {
 .wrapper .content {
   width: 100%;
   min-height: 100vh;
-}
-
-.wrapper .content:has(.sidebar .visible) {
-  width: 50%;
 }
 
 .wrapper .sidebar {
@@ -155,11 +147,11 @@ section {
 }
 
 .wrapper .sidebar.qrtr.left {
-  left: -25%;
+  left: 0%;
 }
 
 .wrapper .sidebar.qrtr.right {
-  right: -25%;
+  right: 0%;
 }
 
 .wrapper .sidebar.half.left {
@@ -237,13 +229,52 @@ section {
   }
 }
 
-.navigation {
-  background-color: #44F8B0 !important;
-  display: flex;
-  justify-content: left;
-  align-items: flex-end;
-  font-size: 2.5rem;
-  font-weight: bold;
+.btn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 12px 24px;
+  border: 0;
+  color: #000021;
+  line-height: 1.15;
+  font-size: 16px;
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+}
+
+.btn:hover {
+  transition: all .1s ease;
+}
+
+.btn.primary {
+  background: #1DE9B6;
+}
+
+.btn.primary:hover {
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1DE9B6;
+}
+
+.btn.secondary {
+  background: #7C4DFF;
+  color: #FFFFFF;
+}
+
+.btn.secondary:hover {
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #7C4DFF;
+}
+
+.btn:disabled {
+  background: #E7EBEE;
+  color: #D3D3D3;
+}
+
+.btn-group {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 0.5rem;
 }
 
 /*# sourceMappingURL=capsule-ui.css.map */

@@ -5,8 +5,7 @@
     .content
         width: 100%
         min-height: 100vh
-        &:has(.sidebar .visible)
-             width: 50%
+
     .sidebar
         position: absolute
         top: 0
@@ -19,11 +18,10 @@
         transition: left 0.5s
         transition: right 0.5s
         &.qrtr
-            width: 25%
             &.left
-                left: -25%
+                left: 0%
             &.right
-                right: -25%
+                right: 0%
         &.half
             &.left
                 left: -50%

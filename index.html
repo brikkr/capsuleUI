@@ -60,16 +60,17 @@
               <form class="form">
                 <div class="input">
                   <label>Text label</label>
-                  <input class="full" disabled type="text" placeholder="Enter text..."></input>
+                  <input class="full" disabled type="text" placeholder="Disabled"></input>
                 </div>
                 <input class="full" type="text" placeholder="Enter email..."></input>
-                <div class="input inline">
-                  <input type="checkbox" />
-                  <label>Checkbox</label>
-                </div>
+              
                 <div class="input inline">
                   <input type="checkbox" checked/>
                   <label>By checking, you accept terms of use. Please check conditions on your website.</label>
+                </div>
+                <div class="input inline">
+                  <input class="secondary" type="checkbox" checked/>
+                  <label>By checking, you use secondary checkbox</label>
                 </div>
                 <div class="input inline">
                   <label class="switch">
@@ -78,8 +79,6 @@
                   </label>
                   Are you agree ?
                 </div>
-                
-                <input class="secondary" type="checkbox" checked/>
                 <input type="checkbox" disabled/>
                 <input type="checkbox" checked disabled/>
                 <input type="submit" class="btn primary full"/>

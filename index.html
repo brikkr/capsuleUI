@@ -7,18 +7,30 @@
     
   <body>
     <div class="wrapper">
-      <div class="sidebar right qrtr">
-        <button class="btn primary" onclick="toggleSidebar()">
+      <div class="sidebar primary right qrtr">
+        <button class="btn primary" onclick="toggleSidebar('primary')">
           Close
         </button>
+      </div>
+      <div class="sidebar secondary right qrtr">
+        <button class="btn secondary" onclick="toggleSidebar('secondary')">
+          Close
+        </button>
+      </div>
+      <div id="modal" class="modal">
+        <a class="modal-overlay primary" href="#"></a>
+        <div class="modal-content">
+          <h1>Pure CSS<br>Modal Box</h1>
+          <a class="modal-close" href="#">×</a>
+        </div>
       </div>
       <div class="content">
         <section class="section">
           <div class="grid-layout">
-            <a onclick="toggleSidebar()" href="javascript:void(0);"><div class="grid-item logo"><img src="./img/solid-emblem.svg" alt=""></div></a>
+            <a  href="javascript:void(0);"><div class="grid-item logo"><img src="./img/solid-emblem.svg" alt=""></div></a>
             <div class="grid-item btn-group">
-              <button class="btn primary sm">small</button>
-              <button class="btn secondary lg">big</button>
+              <button onclick="toggleSidebar('primary')" class="btn primary sm">small</button>
+              <button onclick="toggleSidebar('secondary')" class="btn secondary lg">big</button>
             </div>
             <div class="grid-item col-lg btn-group inline">
               <button class="btn" disabled>disabled</button>
@@ -29,15 +41,42 @@
             <div class="grid-item col-xs primary"></div>
             <div class="grid-item col-xs row-md secondary"></div>
             <div class="grid-item col-lg row-xs">item 6</div>
-            <div class="grid-item grid-item-7">item 7</div>
-            <div class="grid-item grid-item-8">item 8</div>
-            <div class="grid-item grid-item-9 secondary">item 9</div>
+            <div class="grid-item col-xs row-md">
+              <div class="btn-group">
+                <button onclick="startLoading(this)" class="btn primary sm full loading">loading</button>
+                <button onclick="startLoading(this)" class="btn primary inverted primary sm full">loading</button> 
+                <button onclick="startLoading(this)" class="btn secondary inverted primary sm full">loading</button> 
+              </div>
+            </div>
+            <div class="grid-item grid-item-8">
+              <a href="#modal" class="btn secondary">Open modal</a>
+              
+            </div>
+            <div class="grid-item grid-item-9"><button class="btn secondary">Open modal</button></div>
             <div class="grid-item lg grid-item-10">item 10</div>
             <div class="grid-item grid-item-11 row-lg col-lg">
               <form class="form">
-                <input class="full" disabled type="text" placeholder="Enter text..."></input>
+                <div class="input">
+                  <label>Text label</label>
+                  <input class="full" disabled type="text" placeholder="Enter text..."></input>
+                </div>
                 <input class="full" type="text" placeholder="Enter email..."></input>
-                <input type="checkbox" />
+                <div class="input inline">
+                  <input type="checkbox" />
+                  <label>Checkbox</label>
+                </div>
+                <div class="input inline">
+                  <input type="checkbox" checked/>
+                  <label>By checking, you accept terms of use. Please check conditions on your website.</label>
+                </div>
+                <div class="input inline">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span></span>
+                  </label>
+                  Are you agree ?
+                </div>
+                
                 <input class="secondary" type="checkbox" checked/>
                 <input type="checkbox" disabled/>
                 <input type="checkbox" checked disabled/>

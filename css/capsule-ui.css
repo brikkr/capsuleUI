@@ -57,6 +57,10 @@ button:focus {
   outline: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #E7EBEE;
   font-family: "Roboto", sans-serif;
@@ -157,6 +161,7 @@ section {
 
 .wrapper .sidebar {
   position: fixed;
+  z-index: 998;
   top: 0;
   right: 0;
   background-color: #1DE9B6;
@@ -257,15 +262,17 @@ section {
 
 .btn {
   display: inline-block;
+  position: relative;
   outline: none;
   cursor: pointer;
   font-weight: 700;
   border-radius: 0.5rem;
   padding: 12px 24px;
   border: 0;
-  color: #000021;
+  color: #FFFFFF;
   line-height: 1.25;
   font-size: 16px;
+  text-align: center;
 }
 
 .btn:hover {
@@ -322,6 +329,47 @@ section {
 
 .btn.full {
   width: 100%;
+}
+
+.btn.loading {
+  color: transparent;
+}
+
+.btn.loading::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid transparent;
+  border-top-color: #FFFFFF;
+  border-radius: 50%;
+  animation: button-loading-spinner 0.5s ease infinite;
+}
+
+.btn.loading.inverted {
+  color: transparent;
+}
+
+.btn.loading.inverted::after {
+  border-top-color: #1DE9B6;
+}
+
+.btn.loading.inverted.secondary::after {
+  border-top-color: #7C4DFF;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 .btn-group {
@@ -459,6 +507,138 @@ input[type=checkbox]::-ms-check {
 input[type=checkbox]::-ms-check {
   box-shadow: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23{$white}'/%3E %3C/svg%3E");
+}
+
+.input {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.input.inline {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: calc(4rem - 3px);
+  height: 2rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.switch input {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 0;
+  height: 0;
+}
+
+.switch input + span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #E7EBEE;
+  border-radius: 1rem;
+}
+
+.switch input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: calc(2rem - 6px);
+  height: calc(2rem - 6px);
+  background: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all .5s;
+}
+
+.switch input:checked + span {
+  background: #1DE9B6;
+}
+
+.switch input:checked + span:before {
+  left: 2rem;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-overlay {
+  z-index: 9998;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal-overlay.primary {
+  background-color: #1DE9B6;
+}
+
+.modal-overlay.secondary {
+  background-color: #7C4DFF;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  align-items: center;
+  z-index: 9999;
+  position: relative;
+  width: 75%;
+  height: 75%;
+  background-color: #FFFFFF;
+}
+
+.modal-content .modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  color: #E7EBEE;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.modal-content .modal-close:hover {
+  color: #D3D3D3;
+}
+
+#modal:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content h1 {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=capsule-ui.css.map */

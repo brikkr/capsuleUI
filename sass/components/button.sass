@@ -1,14 +1,17 @@
 .btn
     display: inline-block
+    position: relative
     outline: none
     cursor: pointer
     font-weight: 700
     border-radius: 0.5rem
     padding: 12px 24px
     border: 0
-    color: $black
+    color: $white
     line-height: 1.25
     font-size: $font-size
+    text-align: center
+
 
     &:hover
         transition: all .1s ease
@@ -43,6 +46,39 @@
 
     &.full
         width: 100%
+
+    &.loading
+        color: transparent
+        &::after
+            content: ""
+            position: absolute
+            width: 1rem
+            height: 1rem
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0 
+            margin: auto
+            border: 3px solid transparent
+            border-top-color: $white
+            border-radius: 50%
+            animation: button-loading-spinner 0.5s ease infinite
+        &.inverted
+            color: transparent
+            &::after
+                border-top-color: $primary
+            &.secondary
+                &::after
+                    border-top-color: $secondary
+
+
+@keyframes button-loading-spinner 
+    from 
+        transform: rotate(0turn)
+    to 
+        transform: rotate(1turn)
+    
+ 
 
     
 .btn-group

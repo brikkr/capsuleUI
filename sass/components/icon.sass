@@ -1,0 +1,21 @@
+$icon-list: "activity","surface","length","height","width","volume","area"
+$icon-dir: "../img/icons/svg/"
+
+.icon
+    width: 24px
+    height: 24px
+    @each $icon in $icon-list  
+        &.#{$icon}
+            background-color: $gray
+            -webkit-mask-image: url($icon-dir + $icon + '.svg');
+            mask-image: url($icon-dir + $icon + '.svg');
+        &.primary
+            background-color: $primary
+        &.secondary
+            background-color: $secondary
+
+
+
+
+                
+        

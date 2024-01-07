@@ -74,6 +74,7 @@ section {
   padding: 1rem;
 }
 
+/* CapsuleUI Helper */
 /* CapsuleUI Grid */
 .grid-layout {
   display: grid;
@@ -639,6 +640,109 @@ input[type=checkbox]::-ms-check {
   .modal-content h1 {
     font-size: 2rem;
   }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon.activity {
+  background-color: #D3D3D3;
+  -webkit-mask-image: url("../img/icons/svg/activity.svg");
+  mask-image: url("../img/icons/svg/activity.svg");
+}
+
+.icon.primary {
+  background-color: #1DE9B6;
+}
+
+.icon.secondary {
+  background-color: #7C4DFF;
+}
+
+.icon.surface {
+  background-color: #D3D3D3;
+  -webkit-mask-image: url("../img/icons/svg/surface.svg");
+  mask-image: url("../img/icons/svg/surface.svg");
+}
+
+.icon.primary {
+  background-color: #1DE9B6;
+}
+
+.icon.secondary {
+  background-color: #7C4DFF;
+}
+
+.icon.length {
+  background-color: #D3D3D3;
+  -webkit-mask-image: url("../img/icons/svg/length.svg");
+  mask-image: url("../img/icons/svg/length.svg");
+}
+
+.icon.primary {
+  background-color: #1DE9B6;
+}
+
+.icon.secondary {
+  background-color: #7C4DFF;
+}
+
+.icon.height {
+  background-color: #D3D3D3;
+  -webkit-mask-image: url("../img/icons/svg/height.svg");
+  mask-image: url("../img/icons/svg/height.svg");
+}
+
+.icon.primary {
+  background-color: #1DE9B6;
+}
+
+.icon.secondary {
+  background-color: #7C4DFF;
+}
+
+.icon.width {
+  background-color: #D3D3D3;
+  -webkit-mask-image: url("../img/icons/svg/width.svg");
+  mask-image: url("../img/icons/svg/width.svg");
+}
+
+.icon.primary {
+  background-color: #1DE9B6;
+}
+
+.icon.secondary {
+  background-color: #7C4DFF;
+}
+
+.icon.volume {
+  background-color: #D3D3D3;
+  -webkit-mask-image: url("../img/icons/svg/volume.svg");
+  mask-image: url("../img/icons/svg/volume.svg");
+}
+
+.icon.primary {
+  background-color: #1DE9B6;
+}
+
+.icon.secondary {
+  background-color: #7C4DFF;
+}
+
+.icon.area {
+  background-color: #D3D3D3;
+  -webkit-mask-image: url("../img/icons/svg/area.svg");
+  mask-image: url("../img/icons/svg/area.svg");
+}
+
+.icon.primary {
+  background-color: #1DE9B6;
+}
+
+.icon.secondary {
+  background-color: #7C4DFF;
 }
 
 /*# sourceMappingURL=capsule-ui.css.map */

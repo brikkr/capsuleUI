@@ -8,20 +8,20 @@
   <body>
     <div class="wrapper">
       <div class="sidebar primary right qrtr">
-        <button class="btn primary" onclick="toggleSidebar('primary')">
-          Close
+        <button class="btn-icon" onclick="toggleSidebar('primary')">
+          <i class="icon x-close"></i>
         </button>
       </div>
       <div class="sidebar secondary right qrtr">
-        <button class="btn secondary" onclick="toggleSidebar('secondary')">
-          Close
+        <button class="btn-icon" onclick="toggleSidebar('secondary')">
+          <i class="icon x-close"></i>
         </button>
       </div>
       <div id="modal" class="modal">
         <a class="modal-overlay primary" href="#"></a>
         <div class="modal-content">
           <h1>Pure CSS<br>Modal Box</h1>
-          <a class="modal-close" href="#">×</a>
+          <a href="#" class="modal-close btn-icon"><i class="icon x-close"></i></a>
         </div>
       </div>
       <div class="content">
@@ -30,7 +30,7 @@
             <a  href="javascript:void(0);"><div class="grid-item logo"><img src="./img/solid-emblem.svg" alt=""></div></a>
             <div class="grid-item btn-group">
               <button onclick="toggleSidebar('primary')" class="btn primary sm">small</button>
-              <button onclick="toggleSidebar('secondary')" class="btn secondary lg">big</button>
+              <button onclick="toggleSidebar('secondary')" class="btn secondary lg">normal</button>
             </div>
             <div class="grid-item col-lg btn-group inline">
               <button class="btn" disabled>disabled</button>
@@ -38,33 +38,60 @@
               <button class="btn secondary inverted">inverted</button>
               <button class="btn primary full">full</button>
             </div>
-            <div class="grid-item col-xs primary"></div>
+            <div class="grid-item col-md row-md ">
+              <div class="btn-group inline">
+                <button class="btn sm primary"><i class="icon x-close"></i></button>
+                <button class="btn sm secondary"><i class="icon x-close"></i><span>Close</span></button>
+                <button class="btn secondary"><i class="icon x-close"></i><span>Supprimer</span></button>
+                <button class="btn secondary inverted"><i class="icon x-close"></i><span>Supprimer</span></button>
+                <button class="btn primary full"><i class="icon x-close"></i><span>Enlever</span></button>
+                <button class="btn primary inverted full"><i class="icon x-close"></i><span>Enlever</span></button>
+              </div>
+            
+
+            </div>
             <div class="grid-item col-xs row-md secondary"></div>
-            <div class="grid-item col-lg row-xs"></div>
+            <div class="grid-item col-lg row-xs">
+              
+            </div>
             <div class="grid-item col-xs row-md">
               <div class="btn-group">
-                <button onclick="startLoading(this)" class="btn primary sm full loading">loading</button>
+                <button onclick="startLoading(this)" class="btn primary">
+                  <span class="loader"></span></button>
                 <button onclick="startLoading(this)" class="btn secondary sm full loading">loading</button>
                 <button onclick="startLoading(this)" class="btn primary inverted primary sm full">loading</button> 
                 <button onclick="startLoading(this)" class="btn secondary inverted primary sm full">loading</button> 
               </div>
             </div>
             <div class="grid-item">
-              <div class="btn-group">
-                <a href="#modal" class="btn secondary">Open modal</a>
+              <div class="btn-group inline">
+                <a href="#modal" class="btn-icon primary"><i class="icon help-square"></i></a>
+                <a href="#modal" class="btn-icon secondary"><i class="icon annotation-heart"></i></a>
+                
               </div> 
             </div>
             
             <div class="grid-item lg grid-item-10"><div class="test test--activity"></div>
-                <div class="icon activity"></div>
+                <i class="icon check"></i>
+                <i class="icon chevron-down-double primary"></i>
+                <i class="icon activity secondary"></i>
+                <i class="icon zap-off secondary"></i>
             </div>
             <div class="grid-item grid-item-11 row-lg col-lg">
               <form class="form">
                 <div class="input">
-                  <label>Text label</label>
-                  <input class="full" disabled type="text" placeholder="Disabled"></input>
+                  <label>Email</label>
+                  <input class="full" type="email" placeholder="Enter your Email..."></input>
                 </div>
-                <input class="full" type="text" placeholder="Enter email..."></input>
+                <div class="select">
+                  <select class="full" required>
+                    <option value="" disabled selected>Choose a drink</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
               
                 <div class="input inline">
                   <input type="checkbox" checked/>
@@ -81,9 +108,27 @@
                   </label>
                   Are you agree ?
                 </div>
-                <input type="checkbox" disabled/>
-                <input type="checkbox" checked disabled/>
-                <input type="submit" class="btn primary full"/>
+                <div class="input">
+                    <label>Your comment</label>
+                    <textarea></textarea>
+                </div>
+                <div class="input inline">
+                  <label>Male</label>
+                  <input type="radio" name="radio" value="1" checked>
+                  <label>Female</label>
+                  <input type="radio" name="radio" value="2">
+                </div>
+                <div class="input date">
+                  <input type="date">
+                </div>
+                
+                <div class="input">
+                  <button type="submit" class="btn primary full">
+      
+                    <span>ENVOYER</span>
+
+                  </button>
+                </div>
               </form>
             </div>
             <div class="grid-item grid-item-12">item 12</div>

@@ -1,0 +1,117 @@
+.btn
+    display: inline-flex
+    position: relative
+    outline: none
+    cursor: pointer
+    font-weight: 700
+    border-radius: 0.5rem
+    padding: 12px 12px
+    border: 0
+    color: $white
+    border: 3px solid $white
+    line-height: 1.0
+    font-size: $font-size
+    text-transform: uppercase
+    text-align: center
+    align-items: center
+    justify-content: center
+    height: 54px
+    min-width: 54px
+
+
+
+    &:has(.icon)
+        padding: 6px
+        span
+            padding-right: 6px
+            padding-left: 6px
+        
+    .icon
+        background-color: $white !important
+
+
+    &.primary
+        background: $primary
+        &:hover
+            border-color: $primary
+        &.inverted
+            background: transparent
+            color: $primary
+            &:hover
+                 border-color: $primary
+            .icon
+                background-color: $primary !important
+    &.secondary
+        background: $secondary
+        color: $white
+        &:hover
+             border-color: $secondary
+        &.inverted
+            background: transparent
+            color: $secondary
+            &:hover
+                border-color: $secondary
+            .icon
+                background-color: $secondary !important
+    &:disabled
+        background: $light-gray
+        color: $gray
+
+    &.sm
+        height: 36px
+        min-width: 36px
+        &:has(.icon)
+            padding: 3px
+        .icon
+            width: 24px
+            height: 24px
+
+    &.full
+        width: 100%
+
+    &:has(svg)
+        display: inline
+
+
+@keyframes button-loading-spinner 
+    from 
+        transform: rotate(0turn)
+    to 
+        transform: rotate(1turn)
+    
+ 
+
+    
+.btn-group
+    display: flex
+    gap: 0.5rem
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-start
+    &.inline
+        flex-direction: row
+        align-items: center 
+                    
+.btn-icon
+    outline: none
+    padding: 0
+    border: 0
+    .icon
+        background-color: $light-gray !important
+        &:hover
+            background-color: $gray !important
+
+    &.primary
+        .icon:hover
+            background-color: $primary !important
+    &.secondary
+        .icon:hover
+            background-color: $secondary !important
+
+.primary > .btn-icon, .secondary > .btn-icon
+    background-color: transparent
+    .icon
+        background-color: $white !important
+        &:hover
+            opacity: 0.6

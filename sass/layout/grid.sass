@@ -1,4 +1,6 @@
-.grid-layout
+.grid
+    width: 100%
+    height: 100%
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
     grid-gap: 1rem
@@ -43,4 +45,26 @@
 
         &.row-xl
             grid-row-end: span 4
-    
+
+        &.inline
+            display: flex
+            gap: 0.5rem
+            flex-direction: row
+            align-items: center
+        &.column
+            display: flex
+            gap: 0.5rem
+            flex-direction: column
+        
+        .grid-item-header
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            color: var(--main-color);
+            .title
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: 700;
+                opacity: 0.9;
+                margin: 0;

@@ -1,0 +1,15 @@
+progress[value]
+    width: 100%
+    &::-webkit-progress-bar
+        background-color: $light-gray
+        border-radius: 0.5rem
+        height: 1rem
+    &::-webkit-progress-value
+        background-color: $gray
+        border-radius: 0.5rem
+    &.primary
+        &::-webkit-progress-value
+            background-color: $primary !important
+    &.secondary
+        &::-webkit-progress-value
+            background-color: $secondary !important

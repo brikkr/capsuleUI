@@ -1,0 +1,227 @@
+// Agent representation
+    
+.agent
+    display: flex
+    align-items: center
+    justify-items: center
+    position: relative
+    &-picture
+        border-radius: 50%
+        transition: all .3s
+        object-fit: cover
+    
+    &-details
+        display: flex
+        flex-direction: column
+        text-align: left
+        .name
+            transition: all .3s
+        .webid
+            transition: all .3s
+            text-overflow: ellipsis
+            font: $font-size-sm  sans-serif
+            color: $gray
+    &.vertical
+        flex-direction: column           
+        row-gap: 5px
+        .agent-details
+            text-align: center
+    &.horizontal
+        flex-direction: row     
+        column-gap: 5px
+        
+    &.lg
+        img, .counter
+            width: 80px
+            height: 80px
+            line-height: 80px
+            font-size: $font-size-xl
+    &.md
+        img, .counter
+            width: 40px
+            height: 40px
+            line-height: 40px
+            font-size: $font-size
+
+    &.sm
+        img, .counter
+            width: 20px
+            height: 20px
+            line-height: 20px
+        .name
+            font: $font-size-sm  sans-serif
+  
+    &.no-details
+        .agent-details
+            display: block
+            position: absolute
+            top: -10px
+            left: 50%
+            transform: translate(-50%, -50%) scale(0.75) rotate(5deg)
+            transform-origin: bottom center
+            padding: 0.5rem
+            border-radius: 0.5rem
+            background: $secondary
+            text-align: center
+            color: white
+            transition: 0.15s ease-in-out
+            opacity: 0
+            pointer-events: none
+            z-index: 99
+            &:after
+                content: ''
+                display: block
+                margin: 0 auto
+                widtH: 0
+                height: 0
+                border: 5px solid transparent
+                border-top: 5px solid $secondary
+                position: absolute
+                bottom: 0
+                left: 50%
+                transform: translate(-50%, 100%)
+            .name
+                color: white
+            .webid
+                color: $light-gray
+
+
+    &.no-picture
+        .picture, img
+            display: none
+    &.no-name
+        .name
+            display: none 
+    &.no-webid
+        .webid
+            display: none 
+    
+    .counter
+        max-height: 100%
+        border-radius: 50%
+        background-color: $secondary
+        color: $white
+        text-align: center
+        vertical-align: middle
+        font-weight: 700
+        font-size: 10px
+
+   
+
+
+    &:hover
+        &.no-details
+            .agent-details
+                opacity: 1
+                transform: translate(-50%, -100%) scale(1) rotate(0deg)
+                pointer-events: inherit
+                .name
+                    color: white
+                .webid
+                    color: $light-gray
+        .name
+            color: $secondary
+        .webid
+            color: $dark-gray
+        img.agent-picture, .agent-icon
+                box-shadow: 0 0 0 3px $secondary     
+        &.lg
+            img.agent-picture
+                box-shadow: 0 0 0 3px $secondary 
+        &.sm
+            img.agent-picture
+                box-shadow: 0 0 0 3px $secondary
+    img.agent-picture
+            box-shadow: 0 0 0 3px $white    
+    &.lg
+        img.agent-picture
+            box-shadow: 0 0 0 3px $white
+    &.sm
+        img.agent-picture
+            box-shadow: 0 0 0 3px $white
+
+.agents
+    display: flex
+    flex-direction: row
+    align-items: center
+    align-content: flex-start
+    flex-wrap: wrap
+    max-width: 100%
+    position: relative
+
+
+    &:has(.sm)
+        height: 26px
+    &:has(.md)
+        height: 46px
+    &:has(.lg)
+        height: 86px
+
+
+    .agent
+        padding-top: 3px
+        padding-bottom: 3px
+
+        &:not(:first-child), &.md:not(:first-child)
+            margin-left: -16px
+        &.sm
+            &:not(:first-child)
+                margin-left: -8px
+        &.lg
+            &:not(:first-child)
+                margin-left: -32px       
+    
+
+.agents-scroll
+    width: 100%
+
+    display: flex
+    overflow-x: auto
+    
+    align-items: center
+    justify-items: center
+
+    &:hover
+        visibility: visible
+    
+    &::-webkit-scrollbar 
+        height: 6px
+    
+    &::-webkit-scrollbar-track
+        background: transparent
+    
+    &::-webkit-scrollbar-thumb 
+        background: $secondary
+        border-radius: 3px
+    
+    &::-webkit-scrollbar-thumb:hover
+        background: $secondary-light
+    
+    &.horizontal
+        flex-direction: row
+        align-items: flex-start
+        column-gap: 5px
+        margin-top: 1rem
+        margin-left: 1rem
+        margin-right: 1rem
+        height: calc( 100% - 1rem )
+        width: calc(100% - 2rem)
+
+    &.vertical
+        flex-direction: column
+        row-gap: 5px
+        height: calc(100% - 2rem)
+        width: calc(100% - 1rem)
+        overflow-y: auto
+        margin-top: 1rem
+        margin-bottom: 1rem
+        margin-left: 1rem
+        padding-top: 0
+        &::-webkit-scrollbar 
+            width: 6px
+    .agent
+        padding: 3px
+
+
+            
+

@@ -8,14 +8,18 @@ i
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
-    padding-top: 20px;
+
     &.sm
-        width: 24px
-        height: 24px
-    &.xl
-        width: 48px
-        height: 48px
+        width: 10px
+        height: 10px
+    &.md
+        width: 20px
+        height: 20px
+    &.lg
+        width: 40px
+        height: 40px
     &.icon
+        margin: 0 auto;
         @each $icon in $icon-list
             &.#{$icon}
                 background-color: $gray
@@ -25,9 +29,31 @@ i
                 background-color: $primary
             &.secondary
                 background-color: $secondary
+            
+.icon-rounded
+    border-radius: 50%
+    background-color: $gray
+    display: flex;
+    align-items: center;
+    
+    &.sm
+        width: 20px
+        height: 20px
+    &.md
+        width: 40px
+        height: 40px
+    &.lg
+        width: 80px
+        height: 80px
+    &.primary
+        background-color: $primary
+    &.secondary
+        background-color: $secondary
+    i.icon
+        background-color: $white
 
 
-
+// Only for demo
 .icon-item
     display: flex
     flex-direction: column

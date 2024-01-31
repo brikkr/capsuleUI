@@ -117,8 +117,17 @@ input, textarea
             color: $white
             outline: none
         
-    
-
+    &[type=time]
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='#{hexToUrl($gray)}' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+        background-size: 24px
+        background-position: calc(100% - 6px) center
+        background-repeat: no-repeat
+        padding: 3px 12px
+        &::-webkit-datetime-edit-text
+            color: $gray
+        &:focus, &:active
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='#{hexToUrl($primary)}' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+       
 
 .input
     display: flex

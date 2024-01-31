@@ -407,17 +407,27 @@ h2 {
 .grid .grid-item .grid-item-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
   color: var(--main-color);
 }
 
 .grid .grid-item .grid-item-header .title {
+  display: flex;
+  align-items: center;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 24px;
+  gap: 0.5rem;
   font-weight: 700;
-  opacity: 0.9;
   margin: 0;
+}
+
+.grid .grid-item .grid-item-header .title .icon {
+  background-color: #E7EBEE;
+}
+
+.grid .grid-item .grid-item-header .actions {
+  align-self: flex-end;
 }
 
 .grid .grid-item.no-padding {
@@ -497,7 +507,7 @@ h2 {
   font-weight: 700;
   font-size: 16px;
   font-family: "DM Sans", sans-serif;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   text-decoration: none;
   text-align: center;
   height: 40px;
@@ -575,6 +585,11 @@ h2 {
   width: 40px;
   background: transparent;
   border: none;
+}
+
+.button.icon.sm {
+  height: 24px;
+  width: 24px;
 }
 
 .button.icon i {
@@ -759,6 +774,22 @@ input[type=date]::-webkit-datetime-edit-day-field:focus, input[type=date]::-webk
   background-color: #1DE9B6;
   color: #FFFFFF;
   outline: none;
+}
+
+input[type=time], textarea[type=time] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23D3D3D3' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 24px;
+  background-position: calc(100% - 6px) center;
+  background-repeat: no-repeat;
+  padding: 3px 12px;
+}
+
+input[type=time]::-webkit-datetime-edit-text, textarea[type=time]::-webkit-datetime-edit-text {
+  color: #D3D3D3;
+}
+
+input[type=time]:focus, input[type=time]:active, textarea[type=time]:focus, textarea[type=time]:active {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%231DE9B6' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 .input {
@@ -17363,6 +17394,14 @@ progress[value].secondary::-webkit-progress-value {
   box-shadow: 0 0 0 3px #FFFFFF;
 }
 
+.agent:visited .name {
+  color: #000021;
+}
+
+.agent:visited .webid {
+  color: #E7EBEE;
+}
+
 .agents {
   display: flex;
   flex-direction: row;
@@ -17444,6 +17483,7 @@ progress[value].secondary::-webkit-progress-value {
 
 .agents-scroll.vertical {
   flex-direction: column;
+  align-items: flex-start;
   row-gap: 5px;
   height: calc(100% - 2rem);
   width: calc(100% - 1rem);

@@ -1,5 +1,5 @@
 // Agent representation
-    
+
 .agent
     display: flex
     align-items: center
@@ -139,7 +139,11 @@
     &.sm
         img.agent-picture
             box-shadow: 0 0 0 3px $white
-
+    &:visited
+        .name
+            color: $black
+        .webid
+            color: $light-gray
 .agents
     display: flex
     flex-direction: row
@@ -209,6 +213,7 @@
 
     &.vertical
         flex-direction: column
+        align-items: flex-start
         row-gap: 5px
         height: calc(100% - 2rem)
         width: calc(100% - 1rem)

@@ -22600,8 +22600,6 @@ progress[value].secondary::-webkit-progress-value {
 
 .tab + label .icon-rounded .icon {
   background-color: #7C4DFF !important;
-  width: 30px;
-  height: 30px;
 }
 
 .tab + label:hover .icon-rounded {
@@ -22713,13 +22711,6 @@ label {
 }
 
 /* CapsuleUI Components */
-.agent {
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  position: relative;
-}
-
 .agent-picture {
   position: relative;
 }
@@ -22730,176 +22721,34 @@ label {
   object-fit: cover;
 }
 
-.agent-details {
+.agent-picture img.md {
+  width: 24px;
+  height: 24px;
+}
+
+.agent-picture img.lg {
+  width: 36px;
+  height: 36px;
+}
+
+.agent-picture img.xl {
+  width: 48px;
+  height: 48px;
+}
+
+.agent-picture img.xxl {
+  width: 62px;
+  height: 62px;
+}
+
+.agent-name {
   display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.agent-details .name {
-  transition: all .3s;
-}
-
-.agent-details .webid {
-  transition: all .3s;
-  text-overflow: ellipsis;
-  font: 12px sans-serif;
-  color: #C3C3C3;
-}
-
-.agent.vertical {
-  flex-direction: column;
-  row-gap: 5px;
-}
-
-.agent.vertical .agent-details {
-  text-align: center;
-}
-
-.agent.horizontal {
-  flex-direction: row;
-  column-gap: 5px;
-}
-
-.agent.lg img, .agent.lg .counter {
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  font-size: 24px;
-}
-
-.agent.md img, .agent.md .counter {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-}
-
-.agent.sm img, .agent.sm .counter {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-}
-
-.agent.sm .name {
-  font: 12px sans-serif;
-}
-
-.agent.no-details .agent-details {
-  display: block;
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.75) rotate(5deg);
-  transform-origin: bottom center;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  background: #7C4DFF;
-  text-align: center;
-  color: white;
-  transition: 0.15s ease-in-out;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 99;
-}
-
-.agent.no-details .agent-details:after {
-  content: '';
-  display: block;
-  margin: 0 auto;
-  widtH: 0;
-  height: 0;
-  border: 5px solid transparent;
-  border-top: 5px solid #7C4DFF;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 100%);
-}
-
-.agent.no-details .agent-details .name {
-  color: white;
-}
-
-.agent.no-details .agent-details .webid {
-  color: #DAE0E6;
-}
-
-.agent.no-picture .picture, .agent.no-picture img {
-  display: none;
-}
-
-.agent.no-name .name {
-  display: none;
-}
-
-.agent.no-webid .webid {
-  display: none;
-}
-
-.agent .counter {
-  max-height: 100%;
-  border-radius: 50%;
-  background-color: #7C4DFF;
-  color: #FFFFFF;
-  text-align: center;
-  vertical-align: middle;
-  font-weight: 700;
-  font-size: 10px;
-}
-
-.agent:hover.no-details .agent-details {
-  opacity: 1;
-  transform: translate(-50%, -100%) scale(1) rotate(0deg);
-  pointer-events: inherit;
-}
-
-.agent:hover.no-details .agent-details .name {
-  color: white;
-}
-
-.agent:hover.no-details .agent-details .webid {
-  color: #DAE0E6;
-}
-
-.agent:hover .name {
-  color: #7C4DFF;
-}
-
-.agent:hover .webid {
-  color: #C3C3C3;
-}
-
-.agent:hover .agent-picture img, .agent:hover .agent-icon {
-  box-shadow: 0 0 0 3px #7C4DFF;
-}
-
-.agent:hover.lg .agent-picture img {
-  box-shadow: 0 0 0 3px #7C4DFF;
-}
-
-.agent:hover.sm .agent-picture img {
-  box-shadow: 0 0 0 3px #7C4DFF;
-}
-
-.agent img.agent-picture {
-  box-shadow: 0 0 0 3px #FFFFFF;
-}
-
-.agent.lg .agent-picture img {
-  box-shadow: 0 0 0 3px #FFFFFF;
-}
-
-.agent.sm .agent-picture img {
-  box-shadow: 0 0 0 3px #FFFFFF;
-}
-
-.agent:visited .name {
+  align-items: center;
   color: #4c4C4C;
 }
 
-.agent:visited .webid {
-  color: #DAE0E6;
+.agent:hover .agent-name {
+  color: #7C4DFF;
 }
 
 .agents {
@@ -23171,10 +23020,20 @@ label {
 }
 
 .resource-access {
+  display: flex;
   min-width: 60px;
+  height: 50px;
+  flex-direction: column;
   text-align: center;
   color: #C3C3C3;
-  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.resource-agent {
+  width: 100%;
+  display: flex;
+  column-gap: .5rem;
 }
 
 .thing {

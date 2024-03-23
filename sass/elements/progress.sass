@@ -1,18 +1,18 @@
 progress[value]
     width: 100%
     &::-webkit-progress-bar
-        background-color: $light-gray
+        background-color: $gray
         border-radius: 0.5rem
         height: 1rem
     &::-webkit-progress-value
-        background-color: $gray
+        background-color: $gray-dark
         border-radius: 0.5rem
     &.primary
         &::-webkit-progress-value
             background-color: $primary !important
     &.secondary
         &::-webkit-progress-value
-            background-color: $secondary !important
+            background-color: $primary !important
 
 @property --p
     syntax: '<number>';
@@ -46,18 +46,18 @@ progress[value]
     &.primary:before
         background: radial-gradient(farthest-side,$primary 98%,#0000) top/var(--b) var(--b) no-repeat, conic-gradient($primary calc(var(--p)*1%),#0000 0)
     &.secondary:before
-        background: radial-gradient(farthest-side,$secondary 98%,#0000) top/var(--b) var(--b) no-repeat, conic-gradient($secondary calc(var(--p)*1%),#0000 0)
+        background: radial-gradient(farthest-side,$primary 98%,#0000) top/var(--b) var(--b) no-repeat, conic-gradient($primary calc(var(--p)*1%),#0000 0)
     &:before 
         inset: 0
-        background: radial-gradient(farthest-side,$gray 98%,#0000) top/var(--b) var(--b) no-repeat, conic-gradient($gray calc(var(--p)*1%),#0000 0)
+        background: radial-gradient(farthest-side,$gray-dark 98%,#0000) top/var(--b) var(--b) no-repeat, conic-gradient($gray-dark calc(var(--p)*1%),#0000 0)
         -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)))
         mask: radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)))
     &:after 
         inset: calc(50% - var(--b)/2)
-        background: $gray
+        background: $gray-dark
         transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2))
     &.primary:after
         background: $primary
     &.secondary:after
-        background: $secondary
+        background: $primary
     

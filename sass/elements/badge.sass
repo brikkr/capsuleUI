@@ -1,9 +1,5 @@
 .badge 
   position: absolute
-  top: 6px
-  right: 6px
-  width: 12px
-  height: 12px
   border-radius: 50%
   background-color: red
   color: white
@@ -11,4 +7,50 @@
   text-align: center
   font-size: 10px
   z-index: 50
+  &.primary
+    background-color: $primary
+  &.secondary
+    background-color: $primary
+  &.sm
+    width: 12px
+    height: 12px
+  &.md
+    width: 24px
+    height: 24px
+  .icon
+    width: calc(100% - 8px)
+    height: calc(100% - 8px)
+    margin: 4px 4px
+    background-color: $white !important
 
+  &.top
+    &-left
+      &.sm
+        top: 0px
+        left: 3px
+      &.md
+        top: 0px
+        left: 6px
+    &-right
+      &.sm
+        top: 0px
+        right: 3px
+      &.md
+        top: 0px
+        right: 6px
+
+  &.bottom
+    &-left
+      &.sm
+        bottom: 0px
+        left: 3px
+      &.md
+        bottom: 0px
+        left: 6px
+    &-right
+      &.sm
+        bottom: 0px
+        right: 3px
+      &.md
+        bottom: 0px
+        right: 6px

@@ -4,71 +4,82 @@
     top: 0
     bottom: 0
     right: 0
-    background-color: $primary           
+    background-color: $white         
     padding: 1rem
-    color: #FFFFFF
-    transition: left 0.5s
+    transition: left 0.5s 
     transition: right 0.5s
-    overflow-y: scroll;
-    &.secondary
-            background-color: $secondary  
+    overflow-y: scroll
+    box-shadow: -5px 0px 10px rgba(0,0,0,0.1);
+    display: flex
+    gap: 0.5rem
+    flex-direction: column
+    &-content
+        padding: 1rem
 
-    &.qrtr
-        width: 25%
-        &.left
-            left: -25%
-        &.right
-            right: -25%
-    &.half
-        &.left
-            left: -50%
-        &.right
-            right: -50%
-    &.full
-        &.left
-            left: -100%
-        &.right
-            right: -100%
+    &.secondary
+            background-color: $primary  
+
+    width: 25%
+    &.left
+        left: -25%
+    &.right
+        right: -25%
+    
     &.visible
-        &.qrtr
-            width: 25%
-        &.half
-            width: 50%
-        &.full
-            width: 100%
         &.left
             left: 0
         &.right
             right: 0
 
 
-@media (max-width: 80em)
+@media (max-width: 60em)
     .sidebar
-        &.qrtr
-            &.left
-                left: -100%
-            &.right
-                right: -100%
-        &.half
-            &.left
-                left: -100%
-            &.right
-                right: -100%
-        &.full
-            &.left
-                left: -100%
-            &.right
-                right: -100%
-        &.visible
-            &.qrtr
-                width: 100%
-            &.half
-                width: 100%
-            &.full
-                width: 100%
+        width: 100%
+        &.left
+            left: -100%
+        &.right
+            right: -100%    
+        &.visible            
             &.left
                 left: 0
             &.right
                 right: 0
 
+@media (min-width: 60em) and (max-width: 80em)
+    .sidebar
+        width: 75%         
+        &.left
+            left: -75%
+        &.right
+            right: -75% 
+        &.visible
+            &.left
+                left: 0
+            &.right
+                right: 0
         
+@media (min-width: 80em) and (max-width: 120em)
+    .sidebar
+        width: 50%        
+        &.left
+            left: -50%
+        &.right
+            right: -50% 
+        &.visible
+            &.left
+                left: 0
+            &.right
+                right: 0
+
+@media (min-width: 120em) and (max-width: 140em)
+    .sidebar
+        width: 33%
+        &.left
+            left: -33%
+        &.right
+            right: -33%
+        &.visible
+            &.left
+                left: 0
+            &.right
+                right: 0

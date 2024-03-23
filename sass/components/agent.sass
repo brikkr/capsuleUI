@@ -5,10 +5,12 @@
     align-items: center
     justify-items: center
     position: relative
-    &-picture
-        border-radius: 50%
-        transition: all .3s
-        object-fit: cover
+    &-picture 
+        position: relative
+        img
+            border-radius: 50%
+            transition: all .3s
+            object-fit: cover
     
     &-details
         display: flex
@@ -20,7 +22,7 @@
             transition: all .3s
             text-overflow: ellipsis
             font: $font-size-sm  sans-serif
-            color: $gray
+            color: $gray-dark
     &.vertical
         flex-direction: column           
         row-gap: 5px
@@ -61,7 +63,7 @@
             transform-origin: bottom center
             padding: 0.5rem
             border-radius: 0.5rem
-            background: $secondary
+            background: $primary
             text-align: center
             color: white
             transition: 0.15s ease-in-out
@@ -75,7 +77,7 @@
                 widtH: 0
                 height: 0
                 border: 5px solid transparent
-                border-top: 5px solid $secondary
+                border-top: 5px solid $primary
                 position: absolute
                 bottom: 0
                 left: 50%
@@ -83,7 +85,7 @@
             .name
                 color: white
             .webid
-                color: $light-gray
+                color: $gray
 
 
     &.no-picture
@@ -99,7 +101,7 @@
     .counter
         max-height: 100%
         border-radius: 50%
-        background-color: $secondary
+        background-color: $primary
         color: $white
         text-align: center
         vertical-align: middle
@@ -118,32 +120,32 @@
                 .name
                     color: white
                 .webid
-                    color: $light-gray
+                    color: $gray
         .name
-            color: $secondary
+            color: $primary
         .webid
-            color: $dark-gray
-        img.agent-picture, .agent-icon
-                box-shadow: 0 0 0 3px $secondary     
+            color: $gray-dark
+        .agent-picture img, .agent-icon
+                box-shadow: 0 0 0 3px $primary     
         &.lg
-            img.agent-picture
-                box-shadow: 0 0 0 3px $secondary 
+            .agent-picture img
+                box-shadow: 0 0 0 3px $primary 
         &.sm
-            img.agent-picture
-                box-shadow: 0 0 0 3px $secondary
+            .agent-picture img
+                box-shadow: 0 0 0 3px $primary
     img.agent-picture
             box-shadow: 0 0 0 3px $white    
     &.lg
-        img.agent-picture
+        .agent-picture img
             box-shadow: 0 0 0 3px $white
     &.sm
-        img.agent-picture
+        .agent-picture img
             box-shadow: 0 0 0 3px $white
     &:visited
         .name
             color: $black
         .webid
-            color: $light-gray
+            color: $gray
 .agents
     display: flex
     flex-direction: row
@@ -195,11 +197,11 @@
         background: transparent
     
     &::-webkit-scrollbar-thumb 
-        background: $secondary
+        background: $primary
         border-radius: 3px
     
     &::-webkit-scrollbar-thumb:hover
-        background: $secondary-light
+        background: $primary-light
     
     &.horizontal
         flex-direction: row

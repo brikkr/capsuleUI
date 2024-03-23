@@ -6,15 +6,15 @@ select
     padding: 5px 12px
     padding-right: 28px
     color: $black
-    border: 3px solid $light-gray
-    background-color: $light-gray
+    border: 3px solid $gray
+    background-color: $gray
     cursor: pointer
       /* needed */
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none
     /* SVG background image */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='#{hexToUrl($gray)}' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9L12 15L18 9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='#{hexToUrl($gray-dark)}' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9L12 15L18 9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
     background-size: 24px
     background-position: calc(100% - 6px) center
     background-repeat: no-repeat
@@ -27,11 +27,11 @@ select
         display: none
    
     &:invalid
-        color: $gray
+        color: $gray-dark
     
 
     &:hover
-        border: 3px solid $gray
+        border: 3px solid $gray-dark
 
     &:focus, &:active
         border: 3px solid $primary
@@ -45,7 +45,7 @@ select
             display: none
       
         &:disabled
-            color: $gray
+            color: $gray-dark
             opacity: 1
 
 

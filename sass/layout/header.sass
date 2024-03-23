@@ -7,17 +7,35 @@
     position: fixed;
     top: 0;
     max-width: 1800px;
-    background-color: $light-background
+    background-color: $body-bg
     z-index: 950
     
     &-left, &-right
-      display: flex;
-      align-items: center;
-    
+      display: flex
+      align-items: center
+      align-content: center
+      column-gap: 0.5rem
     
     &-left 
-        flex-grow: 1; 
+      flex-grow: 1;
     
     &-right button
-      margin-left: 10px; 
+      margin-left: 10px;
+    
+    &-logo
+      height: 40px
+      img
+        width: 40px
+        height: 40px
+        margin: 0
+        padding: 0
+      
+    &-browser
+      flex-grow: 1
+      display: flex
+      column-gap: 0.5rem
+    
+
+
+      
     

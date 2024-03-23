@@ -11,7 +11,10 @@
       <div class="header">
         <div class="header-left">
           <div class="agent horizontal md">
-            <img class="agent-picture" src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1auto=format&fit=crop&w=900&q=60">
+            <div class="agent-picture">
+              <img class="agent-picture" src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1auto=format&fit=crop&w=900&q=60">
+              <span class="badge bottom-right primary sm"></span>
+            </div>
             <div class="agent-details">
               <span class="name">John Doe</span>
               <span class="webid">id.inrupt.com/john-doe</span>
@@ -22,7 +25,7 @@
         <div class="header-right">
           <div class="navigation horizontal">
             <a href="" class="nav-link active">
-              <span class="badge"></span>
+              <span class="badge secondary top-right sm"></span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M9.35419 21C10.0593 21.6224 10.9856 22 12 22C13.0145 22 13.9407 21.6224 14.6458 21M18 8C18 6.4087 17.3679 4.88258 16.2427 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.8826 2.63214 7.75738 3.75736C6.63216 4.88258 6.00002 6.4087 6.00002 8C6.00002 11.0902 5.22049 13.206 4.34968 14.6054C3.61515 15.7859 3.24788 16.3761 3.26134 16.5408C3.27626 16.7231 3.31488 16.7926 3.46179 16.9016C3.59448 17 4.19261 17 5.38887 17H18.6112C19.8074 17 20.4056 17 20.5382 16.9016C20.6852 16.7926 20.7238 16.7231 20.7387 16.5408C20.7522 16.3761 20.3849 15.7859 19.6504 14.6054C18.7795 13.206 18 11.0902 18 8Z" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -67,12 +70,12 @@
       </div>
       <div class="content">
         <div class="navigation vertical hidden-mobile">
-          <a href="" class="nav-link active">
+          <a href="index.html" class="nav-link active">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           </a>
-          <a href="" class="nav-link">
+          <a href="browser.html" class="nav-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M13 7L11.8845 4.76892C11.5634 4.1268 11.4029 3.80573 11.1634 3.57116C10.9516 3.36373 10.6963 3.20597 10.4161 3.10931C10.0992 3 9.74021 3 9.02229 3H5.2C4.0799 3 3.51984 3 3.09202 3.21799C2.71569 3.40973 2.40973 3.71569 2.21799 4.09202C2 4.51984 2 5.0799 2 6.2V7M2 7H17.2C18.8802 7 19.7202 7 20.362 7.32698C20.9265 7.6146 21.3854 8.07354 21.673 8.63803C22 9.27976 22 10.1198 22 11.8V16.2C22 17.8802 22 18.7202 21.673 19.362C21.3854 19.9265 20.9265 20.3854 20.362 20.673C19.7202 21 18.8802 21 17.2 21H6.8C5.11984 21 4.27976 21 3.63803 20.673C3.07354 20.3854 2.6146 19.9265 2.32698 19.362C2 18.7202 2 17.8802 2 16.2V7ZM15.5 17.5L14 16M15 13.5C15 15.433 13.433 17 11.5 17C9.567 17 8 15.433 8 13.5C8 11.567 9.567 10 11.5 10C13.433 10 15 11.567 15 13.5Z" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -109,14 +112,21 @@
               </div>
               <div class="grid-item-content inline">
                 <div class="agent no-details lg">
-                  <img class="agent-picture" src="https://images.unsplash.com/photo-1533993192821-2cce3a8267d1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFuJTIwbW9kZXJufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60">
+                  <div class="agent-picture">
+                    <img src="https://images.unsplash.com/photo-1533993192821-2cce3a8267d1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFuJTIwbW9kZXJufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60">
+                    <span class="badge bottom-right secondary md"><i class="icon plus"></i></span>
+                    <span class="badge top-right secondary md"><i class="icon bookmark"></i></span>
+                  </div>
                   <div class="agent-details">
                     <span class="name">Andrea B.</span>
                     <span class="webid">id.inrupt.com/andrea-bosqueta</span>
                   </div>
                 </div>
                 <div class="agent horizontal lg">
-                  <img class="agent-picture" src="https://images.unsplash.com/photo-1533993192821-2cce3a8267d1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFuJTIwbW9kZXJufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60">
+                  <div class="agent-picture">
+                    <img src="https://images.unsplash.com/photo-1533993192821-2cce3a8267d1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFuJTIwbW9kZXJufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60">
+                    <span class="badge bottom-right primary md"></span>
+                  </div>
                   <div class="agent-details">
                     <span class="name">Andrea B.</span>
                     <span class="webid">id.inrupt.com/andrea-bosqueta</span>
@@ -133,7 +143,10 @@
               </div>
               <div class="grid-item-content inline">
                 <div class="agent no-details md">
-                  <img class="agent-picture" src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2555&q=80">
+                  <div class="agent-picture">
+                    <img class="agent-picture" src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2555&q=80">
+                    <span class="badge bottom-right primary sm"></span>
+                  </div>
                   <div class="agent-details">
                     <span class="name">Tom Parker</span>
                     <span class="webid">solid.brikkr.com/tomparker24</span>

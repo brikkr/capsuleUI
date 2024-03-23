@@ -1,0 +1,72 @@
+$max-tab-count: 5;
+.tabs
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  list-style: none;
+
+.tab 
+  display: none;
+ 
+  @for $i from 1 through $max-tab-count 
+    &:checked:nth-of-type(#{$i}) ~ .tab__content:nth-of-type(#{$i}) 
+      opacity: 1
+      transition: 0.5s opacity ease-in
+      position: relative;
+      top: 0;
+      z-index: 100;
+      transform: translateY(0px);
+      text-shadow: 0 0 0;
+    
+  
+  &:checked + label 
+    cursor: default
+    .icon-rounded
+      background-color: $primary !important
+      .icon
+          background-color: $white !important
+      
+  
+  + label
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem
+    align-items: center
+    justify-content: center
+    text-decoration: none;
+    color: $gray
+    text-align: center;
+    user-select: none;
+    text-align: center;
+    color: $primary
+    margin: auto
+    margin-top: 1rem
+    margin-bottom: 1rem
+    box-sizing: border-box;
+    transition: 0.5s all ease-in
+    .icon-rounded
+      background-color: $white !important
+      .icon
+          background-color: $primary !important
+
+    &:hover
+        .icon-rounded
+          background-color: $primary !important
+          .icon
+              background-color: $white !important
+    
+  
+  &__content 
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+
+  
+
+
+

@@ -1,19 +1,28 @@
+button
+    background: none
+    border: none
+    
+    
 .button 
     color: $white
-    background-color: $gray
+    background-color: $primary
     font-weight: 700
     font-size: 16px
     font-family: $font
     border-radius: 2rem
     text-decoration: none
     text-align: center
-    height: 40px
-    padding: 0 40px
+    height: 40px !important
+    padding: 0 30px
     margin: 0
-    display: inline-block
+    display: flex
+    align-items: center
+    justify-items: center
+    justify-content: center
+    column-gap: .5rem
     appearance: none
     cursor: pointer
-    border: solid 3px $gray
+    border: solid 3px $primary
     -webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     box-sizing: border-box
@@ -25,67 +34,191 @@
   
     &:visited
         color: $white
-    &:hover, &:focus , 
-        background-color: $light-gray
-        border-color: $light-gray
-  
+    &:hover, &:focus
+        background-color: $primary-light
+        border-color: $primary-light
+        .icon
+            background-color: $white 
     &:active, &.active, &.is-active
-        background-color: transparent
-        border-color: $gray
-        color: $gray
-
-    &.primary,
-        background-color: $primary
+        background-color: transparent 
         border-color: $primary
-        color: white;
-        &:hover, &:focus , 
-            background-color: $primary-light
-            border-color: $primary-light
-        &:active, &.active, &.is-active
-            background-color: transparent
-            border-color: $primary
+        color: $primary
+        .icon
+            background-color: $primary 
+    &.inverted
+        background-color: $white 
+        border-color: $white 
+        color: $primary
+        .icon
+            background-color: $primary 
+        &:hover, &:focus
+            background-color: $secondary 
+            border-color: $secondary 
             color: $primary
-    &.secondary,
-        background-color: $secondary
-        border-color: $secondary
-        color: white;
-        &:hover, &:focus , 
-            background-color: $secondary-light
-            border-color: $secondary-light
+            .icon
+                background-color: $primary 
         &:active, &.active, &.is-active
-            background-color: transparent
-            border-color: $secondary
-            color: $secondary
-    &.icon
-        padding: 0
-        display: flex
-        justify-content: center
-        align-items: center
-        height: 40px
-        width: 40px
+            background-color: $primary 
+            border-color: $white 
+            color: $white
+            .icon
+                background-color: $white 
+
+    &-icon
         background: transparent
         border: none
-        &.sm
-            height: 24px
-            width: 24px
-            
-        i
-            background-color: $light-gray !important
-            &:hover
-                background-color: $gray !important
-        &.primary
-            background: transparent
-            i
-                &:active
-                    background-color: $primary !important
+        .icon
+            background-color: $gray !important
+        &:hover
+            .icon
+                background-color: $primary  !important
+            &.danger
+                .icon
+                    background-color: $red !important
+
+    &.secondary
+        background-color: $secondary
+        border-color: $secondary
+        color: $primary !important
+        .icon
+            background-color: $primary !important
+        &:hover, &:focus
+            background-color: $secondary-light
+            border-color: $secondary-light
+
+        &:active, &.active, &.is-active
+            background-color: $primary !important
+            border-color: $secondary
+            color: $secondary !important
+            .icon
+                background-color: $secondary !important
+        &.inverted
+            background-color: $primary !important
+            border-color: $secondary
+            color: $secondary
+            .icon
+                background-color: $secondary !important
+            &:hover, &:focus
+                background-color: $primary !important
+                border-color: $secondary-light
+                color: $secondary-light
+                .icon
+                    background-color: $secondary-light !important
+            &:active, &.active, &.is-active
+                background-color: $secondary
+                border-color: $secondary
+                color: $primary !important
+                .icon
+                    background-color:  $primary !important
+
+    &.neutral
+        background-color: $gray-dark
+        border-color: $gray-dark
+        &:hover, &:focus
+            background-color: $gray
+            border-color: $gray
+
+        &:active, &.active, &.is-active
+            background-color: transparent !important
+            border-color: $gray-dark
+            color: $gray-dark
+            .icon
+                background-color: $gray-dark !important
+        &.inverted
+            background-color: transparent !important
+            border-color: $gray-dark
+            color: $gray-dark
+            .icon
+                background-color: $gray-dark !important
+            &:hover, &:focus
+                background-color: transparent !important
+                border-color: $gray
+                color: $gray
+                .icon
+                    background-color: $gray !important
+            &:active, &.active, &.is-active
+                background-color: $gray-dark
+                border-color: $gray-dark
+                color: $white
+                .icon
+                    background-color: $white !important
+
+    &.success
+        background-color: $green
+        border-color: $green
+
+        &:hover, &:focus
+            background-color: $green-light 
+            border-color: $green-light 
+
+        &:active, &.active, &.is-active
+            background-color: transparent !important
+            border-color: $green
+            color: $green
+            .icon
+                background-color: $green !important
+        &.inverted
+            background-color: transparent !important
+            border-color: $green
+            color: $green
+            .icon
+                background-color: $green !important
+            &:hover, &:focus
+                background-color: transparent !important
+                border-color: $green-light
+                color: $green-light
+                .icon
+                    background-color: $green-light !important
+            &:active, &.active, &.is-active
+                background-color: $green
+                border-color: $green
+                color: $white
+                .icon
+                    background-color: $white !important
+
+    &.danger
+        background-color: $red
+        border-color: $red
+        &:hover, &:focus
+            background-color: $red-light 
+            border-color: $red-light 
+            color: $white
+
+        &:active, &.active, &.is-active
+            background-color: transparent !important
+            border-color: $red
+            color: $red
+            .icon
+                background-color: $red !important
+        &.inverted
+            background-color: transparent !important
+            border-color: $red
+            color: $red
+            .icon
+                background-color: $red !important
+            &:hover, &:focus
+                background-color: transparent !important
+                border-color: $red-light
+                color: $red-light
+                .icon
+                    background-color: $red-light !important
+            &:active, &.active, &.is-active
+                background-color: $red
+                border-color: $red
+                color: transparent !important
+                .icon
+                    background-color: transparent !important
+
     
-.button-group
-    display: flex
-    gap: 0.5rem
-    flex-direction: column
-    flex-wrap: wrap
-    justify-content: center
-    align-items: flex-start
-    &.inline
-        flex-direction: row
-        align-items: center 
+    &-group
+        display: flex
+        gap: 0.5rem
+        flex-direction: column
+        flex-wrap: wrap
+        justify-content: center
+        align-items: flex-start
+        &.inline
+            flex-direction: row
+            align-items: center 
+
+
